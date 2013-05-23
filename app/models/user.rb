@@ -7,7 +7,10 @@ class User < ActiveLdap::Base
   	arr = Array.new
 	us = User.find(:all, "*")
 	us.each do |u|
-		arr << {"fio" => u.cn,"department" => (u.department rescue "") }
+		arr << {"fio" => u.cn,
+			"department" => (u.department rescue ""),
+			"phonenumber" => (u.telephoneNumber rescue ""),
+			"email" => (u.mail rescue "") }
 	end
 	arr
   end
