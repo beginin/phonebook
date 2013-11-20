@@ -10,7 +10,8 @@ class User < ActiveLdap::Base
 		arr << {"fio" => u.cn,
 			"department" => (u.department rescue ""),
 			"phonenumber" => (u.telephoneNumber rescue ""),
-			"email" => (u.mail rescue "") }
+			"email" => (u.mail rescue ""),
+			"title" => (u.title rescue "") } if (u.department.present? rescue false) and u.userAccountControl!=514 and u.userAccountControl!=66050
 	end
 	arr
   end

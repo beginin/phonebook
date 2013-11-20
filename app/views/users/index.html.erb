@@ -11,15 +11,17 @@
     	<th>ФИО</th>
     	<th>Телефон</th>
     	<th>Email</th>
+        <th>Email</th>
 	</tr>
 </thead>
 <tbody>
 <% @users.each do |user| %>
 	<tr>
-		<td><%= user["department"] %></td>
+	<td><%= user["department"] %></td>
     	<td><%= user["fio"] %></td>
     	<td><%= user["phonenumber"] %></td>
-    	<td><%= user["email"] %></td>
+    	<td><%= mail_to user["email"] %></td>
+        <td><%= user["title"] %></td>
   	</tr>
 
 
