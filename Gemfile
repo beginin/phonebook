@@ -25,6 +25,8 @@ gem 'jquery-rails'
 gem 'therubyracer'
 gem 'activeldap'
 gem 'ruby-ldap'
+gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -40,3 +42,4 @@ gem 'rvm-capistrano'
 
 # To use debugger
 # gem 'debugger'
+
